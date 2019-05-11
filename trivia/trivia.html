@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Trivia</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="main.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="header">
+			<a class="link" href="trivia.html">Continue with new questions</a>
+			<h1 class="title">Trivia Night</h1>
+			<h1 class="score"></h1>
+		</div>
+		<div class="questions">
+			<div class="category" id="category_1">
+				<h3 id="name_of_category_1"></h3>
+				<hr>
+				<div class="question_box" id="question_1"></div>
+				<hr>
+				<form>
+					<input type="radio" name="correct_answer_1"><label id="correct_answer_1"></label>
+					<br>
+					<input type="radio" name="incorrect_answers_1"><label id="incorrect_answers_1"></label>
+				</form>
+			</div>
+			<div class="category" id="category_2">
+				<h3 id="name_of_category_2"></h3>
+				<hr>
+				<div class="question_box" id="question_2"></div>
+				<hr>
+				<form>
+					<input type="radio" name="correct_answer_2"><label id="correct_answer_2"></label>
+					<br>
+					<input type="radio" name="incorrect_answers_2"><label id="incorrect_answers_2"></label>
+				</form>
+			</div>
+			<div class="category" id="category_3">
+				<h3 id="name_of_category_3"></h3>
+				<hr>
+				<div class="question_box" id="question_3"></div>
+				<hr>
+				<form>
+					<input type="radio" name="correct_answer_3"><label id="correct_answer_3"></label>
+					<br>
+					<input type="radio" name="incorrect_answers_3"><label id="incorrect_answers_3"></label>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
