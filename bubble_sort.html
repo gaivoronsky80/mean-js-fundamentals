@@ -1,0 +1,16 @@
+<script type="text/javascript">
+function bubble_Sort(a){
+	for (var i = 0; i < a.length; i++) {
+		for (var j = i + 1 ; j < a.length; j++) {
+			if (a[j] < a[i]) {
+				var temp = "";
+				temp = a[j];
+				a[j] = a[i];
+				a[i] = temp;
+			}
+		}
+	}
+	return a;
+}
+console.log(bubble_Sort([8, 3, 1, 5, 2, 4, 7, 6]));
+</script>

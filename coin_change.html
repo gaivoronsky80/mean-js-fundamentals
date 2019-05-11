@@ -1,0 +1,29 @@
+<script type="text/javascript">
+
+function coinChange(cents) {
+	var dollar = 0;
+    var quarter = 0;
+    var dime = 0;
+    var nickel = 0;
+    var penny = 0;
+    var remainingChange = cents;
+    
+    function amount(coinValue){
+      var numberOfCoins = Math.floor(remainingChange/coinValue);
+      remainingChange = remainingChange - (numberOfCoins * coinValue)
+      
+      return numberOfCoins
+    };
+    
+    dollar = amount(100);
+    quarter = amount(25);   
+    dime = amount(10);    
+    nickel = amount(5);    
+    penny = amount(1);
+    
+    console.log(`Dollars: ${dollar}, Quarters: ${quarter}, Dimes: ${dime}, Nickels: ${nickel}, Pennies: ${penny}`)
+};
+coinChange(194);
+coinChange(150);
+coinChange(203);
+</script>

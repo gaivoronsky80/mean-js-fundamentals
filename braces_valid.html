@@ -1,0 +1,26 @@
+<script type="text/javascript">
+	function bracesValid(valid){
+		var data = {
+			"{":"}",
+			"(":")",
+			"[":"]"
+		};
+		var arr = [];
+		for(var i = 0; i < valid.length; i++){
+			if(valid[i] in data){
+				arr.push(valid[i]);
+			}
+			for(var j in data){
+				if(data[j] === valid[i]){
+					if(data[arr[arr.length-1]] != valid[i]){
+						return false;
+					}
+					arr.pop();
+				}
+			}
+		}
+		return true;
+	}
+	console.log(bracesValid("{{()}}[]"))
+	console.log(bracesValid("{(})"))
+</script>

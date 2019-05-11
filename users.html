@@ -1,0 +1,69 @@
+<script type="text/javascript">
+	users = [ 
+	{
+	    fname: "Kermit",
+	    lname: "the Frog",
+	    languages: ["Python", "JavaScript", "C#", "HTML", "CSS", "SQL"],
+	    interests: {
+			music: ["guitar", "flute"],
+			dance: ["tap", "salsa"],
+			television: ["Black Mirror", "Stranger Things"] 
+  		}
+  	},
+  	{
+	    fname: "Winnie",
+	    lname: "the Pooh",
+	    languages: ["Python", "Swift", "Java"],
+	    interests: {
+			food: ["honey", "honeycomb"],
+			flowers: ["honeysuckle"],
+			mysteries: ["Heffalumps"]
+    	}
+  	},
+  	{
+	    fname: "Arthur",
+	    lname: "Dent",
+	    languages: ["JavaScript", "HTML", "Go"],
+	    interests: {
+			space: ["stars", "planets", "improbability"],
+			home: ["tea", "yellow bulldozers"]
+    	}
+  	}
+	]
+
+	function userLanguages(data){
+		for(i in data){
+			var info = data[i].fname + " " + data[i].lname + " knows ";
+			for(var j in data[i].languages){
+				info += data[i].languages[j];
+				if(j == data[i].languages.length-1){
+					info += ". \n";
+				}
+				else if(j == data[i].languages.length-2){
+					info += ", and ";
+				}
+				else{
+					info += ", ";
+				}
+			}
+			var info2 = data[i].fname + " is also interested in ";
+			for(var j in data[i].interests){
+				for(var n in data[i].interests[j]){
+					info2 += data[i].interests[j][n];
+					if(n == data[i].interests[j].length-1){
+						info2 += ". ";
+					}
+					else if(n == data[i].interests[j].length-2){
+						info2 += " and ";
+					}
+					else{
+						info2 += ", ";
+					}
+				}
+
+			}
+			console.log(info, info2); 
+		}
+	}
+	userLanguages(users)
+</script>

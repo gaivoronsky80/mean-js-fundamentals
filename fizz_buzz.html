@@ -1,0 +1,37 @@
+<script type="text/javascript">
+	function fizzBuzz(num){
+		var y = 'Fizz';
+		var z = 'Buzz';
+		var x = 'FizzBuzz';
+		var arr = '';
+		if(num < 0){
+			console.log('Parameter must be a positive number');
+			return false;
+		}
+		for(var i = 1; i <= num; i++){
+			if(i % 3 == 0 && i % 5 == 0){
+				arr += x;
+			}
+			if(i % 3 == 0 && i % 5 != 0){
+				arr += y;
+			}
+			if(i % 5 == 0 && i % 3 != 0){
+				arr += z;
+			}
+			if(i % 3 != 0 && i % 5 != 0){
+				arr += i;
+			}
+			if(i == num - 1){
+				arr += " and ";
+			}
+			else if (i != num){
+				arr += ", ";
+			}
+			else {
+				arr += ".";
+			}
+		}
+		console.log(arr);
+	}
+	fizzBuzz(15)
+</script>
